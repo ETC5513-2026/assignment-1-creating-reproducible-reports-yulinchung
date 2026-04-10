@@ -1,0 +1,44 @@
+---
+title: "Marketing Spend Performance"
+author: "YU-LIN CHUNG, 35480351"
+format:
+    html:
+        toc: true
+        theme: solar
+    pdf:
+        toc: true
+---
+```{r setup}
+#| echo = FALSE
+knitr::opts_chunk$set(
+    echo = FALSE,
+    message = FALSE,
+    warning = FALSE)
+```
+
+
+# Introduction
+```{r}
+
+```
+
+# Research Question
+```{r}
+
+```
+
+# Dataset Introduction
+```{r}
+
+```
+
+# Dataset Description
+```{r}
+
+```
+
+# Results
+```{r}
+
+```
+
