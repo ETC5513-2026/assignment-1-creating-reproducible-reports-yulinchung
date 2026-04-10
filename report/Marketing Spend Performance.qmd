@@ -9,7 +9,9 @@ format:
         toc: true
 ---
 ```{r setup}
-#| echo = FALSE
+#| echo: FALSE
+#| warning: false
+#| message: false
 knitr::opts_chunk$set(
     echo = FALSE,
     message = FALSE,
@@ -22,15 +24,21 @@ library(tidyverse)
 
 
 # Research Question
-This report use the database of will investigates whether higher marketing spend lead to higher purchase amounts, as well as different segments shows 
+This report uses customer data on marketing spend and purchase amounts to investigate whether higher marketing spend per customer leads to higher purchase amounts, as well as whether this relationship differs across segments, including Consumer, SMB, and Enterprise groups.
 
 
 # Dataset Introduction
 ```{r}
 data <- read.csv(here::here("data/35480351_Yu-Lin Chung.csv"))
+str(data)
 clean_data <- data %>%
     drop_na(purchase_amount)
+summary(data)
 ```
+
+The database includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.
+
+I observed that some purchase amount data is missing, which may cause issues. Therefore, I removed the rows that contain "NULL" values.
 
 # Dataset Description
 ```{r}

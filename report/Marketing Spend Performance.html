@@ -90,10 +90,24 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="research-question" class="level1">
 <h1>Research Question</h1>
-<p>This report will investigates whether higher marketing spend lead to higher purchase amounts, as well as different</p>
+<p>This report uses customer data on marketing spend and purchase amounts to investigate whether higher marketing spend per customer leads to higher purchase amounts, as well as whether this relationship differs across segments, including Consumer, SMB, and Enterprise groups.</p>
 </section>
 <section id="dataset-introduction" class="level1">
 <h1>Dataset Introduction</h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  7 variables:
+ $ customer_id    : chr  "35480351_c0001" "35480351_c0002" "35480351_c0003" "35480351_c0004" ...
+ $ signup_date    : chr  "" "2025-07-30" "2024-09-26" "2025-06-03" ...
+ $ marketing_spend: num  186 64.5 11.3 293.6 61.6 ...
+ $ visits         : int  0 3 2 6 7 5 1 2 5 7 ...
+ $ purchase_amount: num  270.4 NA 90 NA 55.5 ...
+ $ segment        : chr  "SMB" "Consumer" "Consumer" "Consumer" ...
+ $ notes          : chr  "" "N/A" "" "contacted" ...</code></pre>
+</div>
+</div>
+<p>The database includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.</p>
+<p>I observed that there are some purchase amounts data is missing, it may result in some trouble. Therefore, I remove the row which contain the “NULL” value.</p>
 </section>
 <section id="dataset-description" class="level1">
 <h1>Dataset Description</h1>
