@@ -14,22 +14,22 @@ knitr::opts_chunk$set(
     echo = FALSE,
     message = FALSE,
     warning = FALSE)
-```
 
+library(tidyverse)
+```
 
 # Introduction
-```{r}
 
-```
 
 # Research Question
-```{r}
+This report use the database of will investigates whether higher marketing spend lead to higher purchase amounts, as well as different segments shows 
 
-```
 
 # Dataset Introduction
 ```{r}
-
+data <- read.csv(here::here("data/35480351_Yu-Lin Chung.csv"))
+clean_data <- data %>%
+    drop_na(purchase_amount)
 ```
 
 # Dataset Description
