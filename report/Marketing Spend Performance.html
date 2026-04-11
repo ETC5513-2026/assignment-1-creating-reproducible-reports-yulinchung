@@ -107,13 +107,50 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <p>The database includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.</p>
-<p>I observed that there are some purchase amounts data is missing, it may result in some trouble. Therefore, I remove the row which contain the “NULL” value.</p>
+<p>I observed that some purchase amount data is missing, which may cause issues. Therefore, I removed the rows that contain “NULL” values.</p>
 </section>
 <section id="dataset-description" class="level1">
 <h1>Dataset Description</h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   132 obs. of  7 variables:
+ $ customer_id    : chr  "35480351_c0001" "35480351_c0003" "35480351_c0005" "35480351_c0006" ...
+ $ signup_date    : chr  "" "2024-09-26" "2025-06-18" "2025-11-16" ...
+ $ marketing_spend: num  186 11.3 61.6 99.7 69.9 ...
+ $ visits         : int  0 2 7 5 1 2 5 7 6 7 ...
+ $ purchase_amount: num  270.4 90 55.5 43 46.5 ...
+ $ segment        : chr  "SMB" "Consumer" "SMB" "Consumer" ...
+ $ notes          : chr  "" "" "" "" ...</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  segment    mean_marketing_spend mean_purchase_amount
+  &lt;chr&gt;                     &lt;dbl&gt;                &lt;dbl&gt;
+1 Consumer                   135.                 135.
+2 Enterprise                 153.                 153.
+3 SMB                        143.                 146.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Marketing-Spend-Performance_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>After cleaning data, the dataset has 132 observations(customers) and 7 variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment, and notes. Expecially, segment is categorical variable which seperate customers in different gropus, such as “SMB”, “Consumer” and “Enterprise”.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Marketing-Spend-Performance_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 
 </main>

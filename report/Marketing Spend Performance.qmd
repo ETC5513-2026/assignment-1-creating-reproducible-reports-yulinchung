@@ -32,21 +32,43 @@ This report uses customer data on marketing spend and purchase amounts to invest
 data <- read.csv(here::here("data/35480351_Yu-Lin Chung.csv"))
 str(data)
 clean_data <- data %>%
-    drop_na(purchase_amount)
-summary(data)
+    drop_na(purchase_amount)%>%
+  mutate(signup_date = as.Date(signup_date))
 ```
 
 The database includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.
 
-I observed that some purchase amount data is missing, which may cause issues. Therefore, I removed the rows that contain "NULL" values.
+I observed that some purchase amount data was missing, which may cause issues. Therefore, I removed the rows that contain "NULL" values. Additionally, the format of customers' sign-up dates was inconsistent,, therefore I adjusted it to make the table clearer.
 
 # Dataset Description
 ```{r}
+str(clean_data)
 
+mean_segment <- clean_data %>%
+    group_by(segment) %>%
+  summarise(
+    mean_marketing_spend = mean(marketing_spend),
+    mean_purchase_amount = mean(purchase_amount)
+  )
+mean_segment
+
+count_segment <- clean_data %>%
+    count(segment)
+ggplot(count_segment, aes(x = segment, y = n))+
+    geom_col()+
+    labs(title =  "Number of Customers by Segment",
+    x = "Customer Segment",
+    y = "Number of Customers")
 ```
+
+After cleaning data, the dataset has 132 observations(customers) and 7 variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. Expecially, segment is categorical variable which seperate customers in different gropus, such as "SMB", "Consumer" and "Enterprise".
 
 # Results
 ```{r}
-
+ggplot(clean_data, aes(x = purchase_amount, y = marketing_spend))+
+    geom_point()+
+    labs(title = "Distribution of Purchase Amount",
+    x = "Purchase Amount",
+    y = "Marketing Spend")
 ```
 
