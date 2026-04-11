@@ -1,0 +1,87 @@
+---
+title: "Appendix"
+author: "YU-LIN CHUNG, 35480351"
+format:
+    html:
+        toc: true
+    pdf:
+        toc: true
+---
+
+# AI statements
+I used ChatGPT (https://openai.com/chatgpt/
+) to refine the grammar and wording of my written explanations. Additionally, i used it to help me identify my coding errors in R and fixes it. I used it approximately 15 times throughout the process to improve the clarity and completeness of my report. I modified the outputs by rewriting, selecting, and adapting the suggestions to fit my own analysis and writing style. All ideas, interpretations, and the overall content of the report were my own work.
+
+## AI assitance 1
+![help identify and correct coding errors](images_AI_used/1.1.png)
+
+![help identify and correct coding errors](images_AI_used/1.2.png)
+
+![help identify and correct coding errors](images_AI_used/1.3.png)
+
+## AI assitance 2
+![help refine grammar and wording](images_AI_used/2.png)
+
+## AI assitance 3
+![help refine grammar and wording](images_AI_used/3.png)
+
+## AI assitance 4
+![help refine grammar and wording](images_AI_used/4.png)
+
+## AI assitance 5
+![help refine grammar and wording](images_AI_used/5.png)
+
+## AI assitance 6
+![help identify and correct coding errors](images_AI_used/6.1.png)
+
+![help identify and correct coding errors](images_AI_used/6.2.png)
+
+![help identify and correct coding errors](images_AI_used/6.3.png)
+
+## AI assitance 7
+![help identify and correct coding errors](images_AI_used/7.1.png)
+
+![help identify and correct coding errors](images_AI_used/7.2.png)
+
+![help identify and correct coding errors](images_AI_used/7.3.png)
+
+![help identify and correct coding errors](images_AI_used/7.4.png)
+
+## AI assitance 8
+![help identify and correct coding errors](images_AI_used/8.1.png)
+
+![help identify and correct coding errors](images_AI_used/8.2.png)
+
+![help identify and correct coding errors](images_AI_used/8.3.png)
+
+![help identify and correct coding errors](images_AI_used/8.4.png)
+
+## AI assitance 9
+![help refine grammar and wording](images_AI_used/9.png)
+
+## AI assitance 10
+![help identify and correct coding errors](images_AI_used/10.1.png)
+
+![help identify and correct coding errors](images_AI_used/10.2.png)
+
+## AI assitance 11
+![help identify and correct coding errors](images_AI_used/11.1.png)
+
+![help identify and correct coding errors](images_AI_used/11.2.png)
+
+## AI assitance 12
+![help identify and correct coding errors](images_AI_used/12.1.png)
+
+![help identify and correct coding errors](images_AI_used/12.2.png)
+
+![help identify and correct coding errors](images_AI_used/12.3.png)
+
+## AI assitance 13
+![help refine grammar and wording](images_AI_used/13.png)
+
+## AI assitance 14
+![help refine grammar and wording](images_AI_used/14.png)
+
+## AI assitance 15
+![help refine grammar and wording](images_AI_used/15.png)
+
