@@ -42,8 +42,7 @@ I observed that some purchase amount data was missing, which may cause issues. T
 
 # Dataset Description
 ```{r}
-str(clean_data)
-
+#| fig-cap: "Number of customers in each customer segment."
 mean_segment <- clean_data %>%
     group_by(segment) %>%
   summarise(
@@ -56,12 +55,13 @@ count_segment <- clean_data %>%
     count(segment)
 ggplot(count_segment, aes(x = segment, y = n))+
     geom_col()+
+    geom_text(aes(label = n), vjust = -0.3) +
     labs(title =  "Number of Customers by Segment",
     x = "Customer Segment",
     y = "Number of Customers")
 ```
 
-After cleaning data, the dataset has 132 observations(customers) and 7 variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. Expecially, segment is categorical variable which seperate customers in different gropus, such as "SMB", "Consumer" and "Enterprise".
+After cleaning data, the dataset contains `r nrow(clean_data)` observations and `r ncol(clean_data)` variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. Expecially, segment is a categorical variable which separates customers in different gropus, such as "SMB", "Consumer" and "Enterprise".
 
 # Results
 ```{r}
