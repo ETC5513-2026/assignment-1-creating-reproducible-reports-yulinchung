@@ -18,18 +18,20 @@ knitr::opts_chunk$set(
     warning = FALSE)
 
 library(tidyverse)
+library(knitr)
 ```
 
 # Introduction
+This report examines whether higher marketing spend is associated with higher customer purchase amounts in a marketing campaign and whether this relationship differs across customer segments. This analysis is important for businesses to understand campaign performance, which can help them allocate marketing budgets more effectively across their customer segments.
 
 
 # Research Question
 This report uses customer data on marketing spend and purchase amounts to investigate whether higher marketing spend per customer leads to higher purchase amounts, as well as whether this relationship differs across segments, including Consumer, SMB, and Enterprise groups.
 
+
 # Dataset Introduction
 ```{r}
 data <- read.csv(here::here("data/35480351_Yu-Lin Chung.csv"))
-str(data)
 clean_data <- data %>%
     drop_na(purchase_amount)%>%
   mutate(signup_date = as.Date(signup_date))
@@ -37,19 +39,25 @@ clean_data <- data %>%
 
 The database includes marketing information for `r nrow(data)` customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.
 
-I observed that some purchase amount data was missing, which may cause issues. Therefore, I removed the rows that contain "NULL" values. Additionally, the format of customers' sign-up dates was inconsistent,, therefore I adjusted it to make the table clearer.
+I observed that some purchase amount data was missing, which may cause issues. Therefore, I removed the rows that contain missing values. Additionally, the format of customers' sign-up dates was inconsistent,, therefore I adjusted it to make the table clearer.
+
 
 # Dataset Description
 ```{r}
-#| fig-cap: "Number of customers in each customer segment."
+#| label: tbl-mean
+#| tbl-cap: Mean of marketing spend and purchase amount of each segment.
 mean_segment <- clean_data %>%
     group_by(segment) %>%
   summarise(
     mean_marketing_spend = mean(marketing_spend),
     mean_purchase_amount = mean(purchase_amount)
   )
-mean_segment
-
+mean_segment %>%
+    kable()
+```
+```{r}
+#| label: fig-barchart
+#| fig-cap: "Number of customers in each customer segment."
 count_segment <- clean_data %>%
     count(segment)
 ggplot(count_segment, aes(x = segment, y = n))+
@@ -61,6 +69,7 @@ ggplot(count_segment, aes(x = segment, y = n))+
 ```
 
 After cleaning data, the dataset contains `r nrow(clean_data)` observations and `r ncol(clean_data)` variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. Expecially, segment is a categorical variable which separates customers in different gropus, such as "SMB", "Consumer" and "Enterprise".
+
 
 # Results
 ```{r}
