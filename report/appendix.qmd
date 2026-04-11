@@ -4,8 +4,6 @@ author: "YU-LIN CHUNG, 35480351"
 format:
     html:
         toc: true
-    pdf:
-        toc: true
 ---
 
 # AI statements
