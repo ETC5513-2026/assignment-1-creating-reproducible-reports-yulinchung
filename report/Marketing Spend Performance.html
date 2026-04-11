@@ -91,12 +91,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="research-question" class="level1">
 <h1>Research Question</h1>
-<p>This report uses customer data on marketing spend and purchase amounts to investigate whether higher marketing spend per customer leads to higher purchase amounts, as well as whether this relationship differs across segments, including Consumer, SMB, and Enterprise groups.</p>
+<p>This report investigates whether higher marketing spend per customer leads to higher purchase amounts. Furthermore, it examines whether this relationship differs across customer segments, including Consumer, SMB, and Enterprise.</p>
 </section>
 <section id="dataset-introduction" class="level1">
 <h1>Dataset Introduction</h1>
-<p>The database includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visitors, purchase amounts, and some notes.</p>
-<p>I observed that some purchase amount data was missing, which may cause issues. Therefore, I removed the rows that contain missing values. Additionally, the format of customers’ sign-up dates was inconsistent,, therefore I adjusted it to make the table clearer.</p>
+<p>The dataset includes marketing information for 150 customers, each with a unique ID. Additionally, it includes their sign-up dates, customer types, marketing spend of campaign, number of visits, purchase amounts, and some notes.</p>
+<p>I observed that some purchase amount data was missing, which may cause issues. Therefore, I removed the rows that contain missing values of purchase amount. Additionally, the format of customers’ sign-up dates was inconsistent, therefore I adjusted it to make the table clearer.</p>
 </section>
 <section id="dataset-description" class="level1">
 <h1>Dataset Description</h1>
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="tbl-mean" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Mean of marketing spend and purchase amount of each segment.
+Table&nbsp;1: Average marketing spend and purchase amount by customer segment.
 </figcaption>
 <div aria-describedby="tbl-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -153,7 +153,8 @@ Figure&nbsp;1: Number of customers in each customer segment.
 </div>
 </div>
 </div>
-<p>After cleaning data, the dataset contains 132 observations and 7 variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. Expecially, segment is a categorical variable which separates customers in different gropus, such as “SMB”, “Consumer” and “Enterprise”.</p>
+<p>After cleaning data, the dataset contains 132 observations and 7 variables. The numerical variables are marketing spend, visits, and purchase amount, while the non-numerical variables include customer ID, sign-up date, segment and notes. In particular, segment is a categorical variable which separates customers in different gropus, such as SMB, Consumer and Enterprise.</p>
+<p>Overall, <a href="#tbl-mean" class="quarto-xref">Table&nbsp;1</a> summarises the average marketing spend and purchase amount across customer segments, while <a href="#fig-barchart" class="quarto-xref">Figure&nbsp;1</a> shows the number of customers in each segment.</p>
 </section>
 <section id="results" class="level1">
 <h1>Results</h1>
